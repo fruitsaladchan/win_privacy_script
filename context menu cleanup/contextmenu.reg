@@ -1,0 +1,180 @@
+Windows Registry Editor Version 5.00
+
+; Remove "Send To" Context Menu Handler
+[-HKEY_CLASSES_ROOT\AllFilesystemObjects\shellex\ContextMenuHandlers\SendTo]
+[-HKEY_CLASSES_ROOT\UserLibraryFolder\shellex\ContextMenuHandlers\SendTo]
+
+; Block Share from Context Menu
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked]
+"{e2bf9676-5f8f-435c-97eb-11607a5bedf7}"="Share"
+
+; Remove Shell Image Preview Context Menu Handlers
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.avci\ShellEx\ContextMenuHandlers\ShellImagePreview]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.avif\ShellEx\ContextMenuHandlers\ShellImagePreview]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.bmp\ShellEx\ContextMenuHandlers\ShellImagePreview]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.dds\ShellEx\ContextMenuHandlers\ShellImagePreview]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.dib\ShellEx\ContextMenuHandlers\ShellImagePreview]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.gif\ShellEx\ContextMenuHandlers\ShellImagePreview]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.heic\ShellEx\ContextMenuHandlers\ShellImagePreview]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.heif\ShellEx\ContextMenuHandlers\ShellImagePreview]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.hif\ShellEx\ContextMenuHandlers\ShellImagePreview]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.ico\ShellEx\ContextMenuHandlers\ShellImagePreview]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.jfif\ShellEx\ContextMenuHandlers\ShellImagePreview]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.jpe\ShellEx\ContextMenuHandlers\ShellImagePreview]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.jpeg\ShellEx\ContextMenuHandlers\ShellImagePreview]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.jpg\ShellEx\ContextMenuHandlers\ShellImagePreview]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.jxr\ShellEx\ContextMenuHandlers\ShellImagePreview]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.png\ShellEx\ContextMenuHandlers\ShellImagePreview]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.rle\ShellEx\ContextMenuHandlers\ShellImagePreview]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.tif\ShellEx\ContextMenuHandlers\ShellImagePreview]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.tiff\ShellEx\ContextMenuHandlers\ShellImagePreview]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.wdp\ShellEx\ContextMenuHandlers\ShellImagePreview]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.webp\ShellEx\ContextMenuHandlers\ShellImagePreview]
+
+; Remove from Properties tab
+[-HKEY_CLASSES_ROOT\AllFilesystemObjects\shellex\PropertySheetHandlers\{596AB062-B4D2-4215-9F74-E9109B0A8153}]
+[-HKEY_CLASSES_ROOT\CLSID\{450D8FBA-AD25-11D0-98A8-0800361B1103}\shellex\PropertySheetHandlers\{596AB062-B4D2-4215-9F74-E9109B0A8153}]
+[-HKEY_CLASSES_ROOT\Directory\shellex\PropertySheetHandlers\{596AB062-B4D2-4215-9F74-E9109B0A8153}]
+[-HKEY_CLASSES_ROOT\Drive\shellex\PropertySheetHandlers\{596AB062-B4D2-4215-9F74-E9109B0A8153}]
+
+; Remove from Context Menu
+[-HKEY_CLASSES_ROOT\AllFilesystemObjects\shellex\ContextMenuHandlers\{596AB062-B4D2-4215-9F74-E9109B0A8153}]
+[-HKEY_CLASSES_ROOT\CLSID\{450D8FBA-AD25-11D0-98A8-0800361B1103}\shellex\ContextMenuHandlers\{596AB062-B4D2-4215-9F74-E9109B0A8153}]
+[-HKEY_CLASSES_ROOT\Directory\shellex\ContextMenuHandlers\{596AB062-B4D2-4215-9F74-E9109B0A8153}]
+[-HKEY_CLASSES_ROOT\Drive\shellex\ContextMenuHandlers\{596AB062-B4D2-4215-9F74-E9109B0A8153}]
+
+; To clear any policies
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer]
+"NoPreviousVersionsPage"=-
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer]
+"NoPreviousVersionsPage"=-
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\PreviousVersions]
+"DisableLocalPage"=-
+[HKEY_CURRENT_USER\Software\Policies\Microsoft\PreviousVersions]
+"DisableLocalPage"=-
+
+; Disable Sharing Wizard
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"SharingWizardOn"=dword:00000000
+
+; Remove EPP Context Menu Handlers
+[-HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers\EPP]
+[-HKEY_CLASSES_ROOT\CLSID\{09A47860-11B0-4DA5-AFA5-26D86198A780}]
+[-HKEY_CLASSES_ROOT\Directory\shellex\ContextMenuHandlers\EPP]
+[-HKEY_CLASSES_ROOT\Drive\shellex\ContextMenuHandlers\EPP]
+
+; Remove 3D Print Context Menu Handlers
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.bmp\Shell\T3D Print]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.jpg\Shell\T3D Print]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.png\Shell\T3D Print]
+
+; Block Play to Menu
+REG ADD "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked" /V {7AD84985-87B4-4a16-BE58-8B72A5B390F7} /T REG_SZ /D "Play to Menu" /F
+
+; Set Programmatic Access for Print Command
+[HKEY_CLASSES_ROOT\SystemFileAssociations\image\shell\print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\batfile\shell\print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\cmdfile\shell\print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\docxfile\shell\print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\fonfile\shell\print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\htmlfile\shell\print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\inffile\shell\print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\inifile\shell\print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\JSEFile\Shell\Print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\otffile\shell\print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\pfmfile\shell\print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\regfile\shell\print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\rtffile\shell\print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\ttcfile\shell\print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\ttffile\shell\print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\txtfile\shell\print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\VBEFile\Shell\Print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\VBSFile\Shell\Print]
+"ProgrammaticAccessOnly"=""
+
+[HKEY_CLASSES_ROOT\WSFFile\Shell\Print]
+"ProgrammaticAccessOnly"=""
+
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.3mf\Shell\3D Edit]
+
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.bmp\Shell\3D Edit]
+
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.fbx\Shell\3D Edit]
+
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.gif\Shell\3D Edit]
+
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.jfif\Shell\3D Edit]
+
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.jpe\Shell\3D Edit]
+
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.jpeg\Shell\3D Edit]
+
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.jpg\Shell\3D Edit]
+
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.png\Shell\3D Edit]
+
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.tif\Shell\3D Edit]
+
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.tiff\Shell\3D Edit]
+
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.avci\Shell\setdesktopwallpaper]
+
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.avcs\Shell\setdesktopwallpaper]
+
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.avif\Shell\setdesktopwallpaper]
+
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.avifs\Shell\setdesktopwallpaper]
+
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.bmp\Shell\setdesktopwallpaper]
+
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.dib\Shell\setdesktopwallpaper]
+
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.gif\Shell\setdesktopwallpaper]
+
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.heic\Shell\setdesktopwallpaper]
+
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.heics\Shell\setdesktopwallpaper]
+
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.heif\Shell\setdesktopwallpaper]
+
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.heifs\Shell\setdesktopwallpaper]
+
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.jfif\Shell\setdesktopwallpaper]
+
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.jpe\Shell\setdesktopwallpaper]
+
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.jpeg\Shell\setdesktopwallpaper]
