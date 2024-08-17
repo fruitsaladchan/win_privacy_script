@@ -178,3 +178,15 @@ REG ADD "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked
 [-HKEY_CLASSES_ROOT\SystemFileAssociations\.jpe\Shell\setdesktopwallpaper]
 
 [-HKEY_CLASSES_ROOT\SystemFileAssociations\.jpeg\Shell\setdesktopwallpaper]
+
+[-HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers\Sharing]
+
+[-HKEY_CLASSES_ROOT\Directory\Background\shellex\ContextMenuHandlers\Sharing]
+
+[-HKEY_CLASSES_ROOT\Directory\shellex\ContextMenuHandlers\Sharing]
+
+[-HKEY_CLASSES_ROOT\Drive\shellex\ContextMenuHandlers\Sharing]
+
+[-HKEY_CLASSES_ROOT\LibraryFolder\background\shellex\ContextMenuHandlers\Sharing]
+
+[-HKEY_CLASSES_ROOT\UserLibraryFolder\shellex\ContextMenuHandlers\Sharing]
